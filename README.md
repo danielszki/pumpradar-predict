@@ -45,7 +45,7 @@ chance de romper feito o clássico pump de listagem.
 
 ```bash
 sudo apt install -f -y
-sudo dpkg -i pumpradar-predict_1.0.0_all.deb
+sudo dpkg -i pumpradar-predict_1.0.1_all.deb
 pumpradar-predict        # ou pela busca de aplicativos: "PumpRadar Predict"
 ```
 
@@ -60,7 +60,7 @@ python3 app.py                  # abre janela nativa (WebKitGTK)
 ## Gerar o .deb
 
 ```bash
-./build_deb.sh          # cria build/pumpradar-predict_1.0.0_all.deb
+./build_deb.sh          # cria build/pumpradar-predict_1.0.1_all.deb
 ```
 
 ## Estrutura

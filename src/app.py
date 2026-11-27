@@ -4,6 +4,15 @@
 faltar WebKitGTK. Run: python3 app.py [--browser]"""
 
 import os
+
+# --- Estabilidade GPU (Radeon antigas, ex.: HD 6450 / r600) ---
+# O renderizador DMABUF do WebKitGTK (>= 2.42) trava GPUs Radeon antigas:
+# tela preta, GPU reset em loop e o desktop inteiro congela. Desativamos a
+# aceleração só desta janela. os.environ.setdefault permite reativar por fora.
+os.environ.setdefault("WEBKIT_DISABLE_DMABUF_RENDERER", "1")
+os.environ.setdefault("WEBKIT_DISABLE_COMPOSITING_MODE", "1")
+os.environ.setdefault("LIBGL_ALWAYS_SOFTWARE", "1")
+
 import socket
 import sys
 import threading

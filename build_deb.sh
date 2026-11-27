@@ -3,7 +3,7 @@
 set -e
 
 ROOT="$(cd "$(dirname "$0")" && pwd)"
-VER="1.0.0"
+VER="1.0.1"
 PKG="pumpradar-predict"
 STAGE="$ROOT/build/pkg"
 DEB="$ROOT/build/${PKG}_${VER}_all.deb"
